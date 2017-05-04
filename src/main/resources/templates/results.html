@@ -1,0 +1,51 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:include="partials/head :: tags" />
+<body>
+
+   
+
+    <main>
+    
+        <div class='container-fluid'>
+        	<div class='row m-t-2'>
+        		<div class='col-md-8 offset-md-2'>
+        			
+        			<div class='row'>
+        				<div class='col-md-12'>
+        					<h2 class='display-1 text-md-center'> Thank you </h2>
+        				</div>
+        			</div>
+        			
+        			<div class='row m-t-2'>
+        				<div class='col-md-12 text-md-center' style='font-size:110%' th:text="'All votes: ' + ${allvotes}"></div>
+        			</div>
+        			
+        			<div class='row m-t-1'>
+	        			<div class='col-md-12 innovations m-t-3'>
+	        				<div th:each='innovation : ${innovations}' class='row inno-result p-a-1 card'>
+	        					<div class='col-md-10'>
+	        						<span style='font-weigth:bold; font-size:110%' th:text='${innovation.innoName}'> </span>
+	        					</div>
+	        					<div class='col-md-2 text-md-center'>
+	        						<span class='tag tag-default' style='background:rgba(0,0,0,0.5);font-size:120%;padding:8px;' th:text='${innovation.voteCount}'></span>
+	        					</div>
+	        				</div>
+	        			</div>
+	        		</div>
+	        		
+	        		<div style='position:fixed;top:0;left:0;padding:5px' class='text-md-center'>
+	        			<a class='btn btn-info' href="/login">
+	        				<span><i class='fa fa-arrow-left'></i> done</span>
+	        			</a>
+	        		</div>
+        			
+        		</div>
+        	</div>
+        </div>
+  
+    </main>
+    
+    <footer></footer>
+
+</body>
+</html>

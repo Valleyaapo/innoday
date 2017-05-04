@@ -1,0 +1,113 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="partials/head :: tags" />
+<body>
+<script></script>
+    
+    <!-- admin login modal -->
+    <div id='modal-admin-login' class='modal fade' role='dialog'>
+        <div class='modal-dialog'>
+            <form class='modal-content' th:action='@{/admin/login}' method='post' >
+                <div class='modal-header'>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"> <i class='fa fa-close'></i> </span>
+                    </button>
+                    <h1 class='modal-title'>Admin</h1>
+                </div>
+                <div class='modal-body'> 
+                        <div class='form-group'>
+                            <input class='form-control' name='username' placeholder='username' size='20' />
+                        </div>
+                        <div class='form-group'>
+                            <input class='form-control' name='password' placeholder='password' type='password' />
+                        </div>
+                </div>
+                <div class='modal-footer'>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+           </form>
+        </div>
+   </div>
+    
+    <header>
+        <div class='container-fluid'>
+            <div class='row'>
+                <div class='col-md-1 offset-md-11 text-md-right p-a-1'>
+                    <button class='btn btn-default' data-toggle="modal" data-target="#modal-admin-login">
+                        <i class='fa fa-lock'></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class='container'>
+        
+        <div class='row m-t-2'>
+            <div class='col-md-12'>
+                <div class='jumbotron' style="background:transparent;">
+                    <h1 class='display-1 text-md-center'> Voting Engine </h1> 
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-6 col-xs-12 offset-md-3'>
+                <form  action="#" th:action="@{/login}" method="post" th:object="${loginForm}">
+                    <div class='form-group text-md-center'> 
+                        <span th:if="${#fields.hasErrors('voterFirstName')}" th:errors="*{voterFirstName}" class='error'> error </span> 
+                        <span th:if="${#fields.hasErrors('voterSirName')}" th:errors="*{voterSirName}" class='error'> error </span>
+                    </div>
+                    <div class='form-group'>
+                        <div class='input-group'>
+                            <span class='input-group-addon'> <i class='fa fa-user'></i> </span>
+                            <input size="20" th:field="*{voterFirstName}" type="text" placeholder="First Name" class='form-control' />
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <div class='input-group'>
+                            <span class='input-group-addon'> <i class='fa fa-user'></i> </span>
+                            <input size="20" th:field="*{voterSirName}" type="text" placeholder="Surname" class='form-control' />
+                        </div>
+                    </div>
+                    <div class='form-group innomem'>
+<!--                         <input style="display:inline-block;" id="radio_button" type='radio'> </input> -->
+						
+                        <select  id="nimi" name="voterTeam" class="form-control">
+                        	<option value="not_in_team"> Select Your Own Team </option>
+							<option th:each="team : ${teams}" th:value="${team.teamName}" th:text="${team.teamName}">pöö</option>
+						</select>
+                        
+                    </div>
+                    <div class='form-group'>
+                        <button type='submit' class='form-control'> login </button>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+            
+        </div>
+    </main>
+
+    <footer></footer>
+	<script>
+// 	$("#nimi").hide();
+	
+// 	$(document).ready(function(){
+
+// 		$("#radio_button").toggle(
+// 				function() {
+// 			$("#nimi").slideUp();
+			
+// 	    }, function() {
+// 			$("#nimi").slideDown();
+// 	    }
+// 		);
+		
+			
+			
+// 		});
+	</script>
+</body>
+</html>
