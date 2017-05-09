@@ -63,9 +63,7 @@ public class AdminCtrl {
 
 		Voter voter = (Voter) session.getAttribute("voter");
 
-		if (voter == null || voter.getTeam().getTeamName() == "not_in_team") {
-			return "redirect:/";
-		}
+		
 
 		Team team = new Team();
 
