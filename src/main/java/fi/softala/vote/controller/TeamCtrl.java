@@ -32,7 +32,7 @@ public class TeamCtrl {
 		team.setTeamName(teamform.getName());
 		teamdao.addNew(team);
 
-		return "redirect:/teamadmin";
+		return "redirect:/teamadmin" + src;
 	}
 
 }
