@@ -14,9 +14,10 @@ Customize view, enable external libraries
 (Presentation Hierarchical)
 (Customize - Content - Nested)
 
-# Further development of the software
+# Further development ideas for the software
 Three votes for a voter, names are not probably necessary info in the database for usage
 but how to ensure a voter does not vote more than three times if there's no name check?
+The % of the given votes among the voters next to the amount of the votes
 
 # Further usage of the software
 Admin should check the status of the software in a good time before the need of the usage
