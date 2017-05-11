@@ -19,8 +19,8 @@ public class AppConfig {
 	public JdbcTemplate jdbcTemplate(BasicDataSource dataSource) {
 		dataSource.setDriverClassName("org.mariadb.jdbc.Driver");
 		dataSource.setUrl("jdbc:mariadb://localhost/aanestys?autoReconnect=true");
-		dataSource.setUsername("aanestys");
-		dataSource.setPassword("aani2");
+		dataSource.setUsername("");
+		dataSource.setPassword("");
 		dataSource.setInitialSize(1);
 		dataSource.setMaxActive(5);
 		try {
