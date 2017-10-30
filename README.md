@@ -26,8 +26,13 @@ Add to the Archive the: name the new event below which comes the innovations
 # Further development ideas for the software
 Three votes for a voter, names are not probably necessary info in the database for usage
 but how to ensure a voter does not vote more than three times if there's no name check?
+<<<<<<< HEAD
 The % of the given votes among the voters next to the amount of the votes
 -> three votes can be rounded by giving each student 3 profiles to vote on with, requires meeting with the teams beforehand possibly?
+
+Maybe adding 
+lombok and RowMappers to the software? (for knowledge: lombok requires an installation to 
+a computer on which it is proggrammed)
 
 # Further usage of the software
 Admin should check the status of the software in a good time before the need of the usage
