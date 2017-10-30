@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fi.softala.test.innovation.InnovationDAOSpringJdbcImplTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-05-09T07:28:58" hostname="Jennys-MacBook-Pro.local" time="0.826">
+  <properties/>
+  <testcase name="testFindAll" classname="fi.softala.test.innovation.InnovationDAOSpringJdbcImplTest" time="0.772"/>
+  <testcase name="testFind" classname="fi.softala.test.innovation.InnovationDAOSpringJdbcImplTest" time="0.03"/>
+  <testcase name="testAddNew" classname="fi.softala.test.innovation.InnovationDAOSpringJdbcImplTest" time="0.023"/>
+  <system-out><![CDATA[10:28:59.055 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+10:28:59.059 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+10:28:59.059 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+10:28:59.193 [Test worker] DEBUG org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - Looking for request mappings in application context: org.springframework.test.web.servlet.setup.StubWebApplicationContext@3c1f1dcf
+10:28:59.219 [Test worker] DEBUG org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - 1 request handler methods found on class fi.softala.vote.controller.MainCtrl: {public java.lang.String fi.softala.vote.controller.MainCtrl.showLogin(javax.servlet.http.HttpSession,org.springframework.ui.Model)={[/],methods=[GET]}}
+10:28:59.221 [Test worker] INFO org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String fi.softala.vote.controller.MainCtrl.showLogin(javax.servlet.http.HttpSession,org.springframework.ui.Model)
+10:28:59.512 [Test worker] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+10:28:59.513 [Test worker] INFO org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.0.CR1
+10:28:59.532 [Test worker] DEBUG org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+10:28:59.533 [Test worker] DEBUG org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+10:28:59.539 [Test worker] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+10:28:59.540 [Test worker] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy24
+10:28:59.542 [Test worker] DEBUG org.hibernate.validator.internal.xml.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+10:28:59.543 [Test worker] DEBUG org.hibernate.validator.internal.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+10:28:59.543 [Test worker] DEBUG org.hibernate.validator.internal.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+10:28:59.544 [Test worker] DEBUG org.hibernate.validator.internal.xml.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+10:28:59.590 [Test worker] INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@3c1f1dcf
+10:28:59.621 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Looking for exception mappings: org.springframework.test.web.servlet.setup.StubWebApplicationContext@3c1f1dcf
+10:28:59.657 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Initializing servlet ''
+10:28:59.666 [Test worker] DEBUG org.springframework.web.context.support.StandardServletEnvironment - Adding [servletConfigInitParams] PropertySource with lowest search precedence
+10:28:59.666 [Test worker] DEBUG org.springframework.web.context.support.StandardServletEnvironment - Adding [servletContextInitParams] PropertySource with lowest search precedence
+10:28:59.671 [Test worker] DEBUG org.springframework.web.context.support.StandardServletEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+10:28:59.671 [Test worker] DEBUG org.springframework.web.context.support.StandardServletEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+10:28:59.671 [Test worker] DEBUG org.springframework.web.context.support.StandardServletEnvironment - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,systemProperties,systemEnvironment]
+10:28:59.671 [Test worker] INFO org.springframework.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+10:28:59.671 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization started
+10:28:59.674 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Unable to locate MultipartResolver with name 'multipartResolver': no multipart request handling provided
+10:28:59.674 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Using LocaleResolver [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@2de3cb8f]
+10:28:59.674 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Using ThemeResolver [org.springframework.web.servlet.theme.FixedThemeResolver@2036369f]
+10:28:59.674 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Using RequestToViewNameTranslator [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1c5f6b1d]
+10:28:59.674 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Using FlashMapManager [org.springframework.web.servlet.support.SessionFlashMapManager@3b6dafdb]
+10:28:59.674 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Published WebApplicationContext of servlet '' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.]
+10:28:59.674 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization completed in 3 ms
+10:28:59.674 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Servlet '' configured successfully
+10:28:59.693 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+10:28:59.693 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+10:28:59.693 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+10:28:59.695 [Test worker] DEBUG org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - Looking for request mappings in application context: org.springframework.test.web.servlet.setup.StubWebApplicationContext@15bab6a8
+10:28:59.695 [Test worker] DEBUG org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - 1 request handler methods found on class fi.softala.vote.controller.MainCtrl: {public java.lang.String fi.softala.vote.controller.MainCtrl.showLogin(javax.servlet.http.HttpSession,org.springframework.ui.Model)={[/],methods=[GET]}}
+10:28:59.695 [Test worker] INFO org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String fi.softala.vote.controller.MainCtrl.showLogin(javax.servlet.http.HttpSession,org.springframework.ui.Model)
+10:28:59.708 [Test worker] DEBUG org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+10:28:59.709 [Test worker] DEBUG org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+10:28:59.709 [Test worker] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+10:28:59.709 [Test worker] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy24
+10:28:59.709 [Test worker] DEBUG org.hibernate.validator.internal.xml.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+10:28:59.710 [Test worker] DEBUG org.hibernate.validator.internal.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+10:28:59.710 [Test worker] DEBUG org.hibernate.validator.internal.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+10:28:59.711 [Test worker] DEBUG org.hibernate.validator.internal.xml.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+10:28:59.713 [Test worker] INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@15bab6a8
+10:28:59.719 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Looking for exception mappings: org.springframework.test.web.servlet.setup.StubWebApplicationContext@15bab6a8
+10:28:59.719 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Initializing servlet ''
+10:28:59.720 [Test worker] DEBUG org.springframework.web.context.support.StandardServletEnvironment - Adding [servletConfigInitParams] PropertySource with lowest search precedence
+10:28:59.720 [Test worker] DEBUG org.springframework.web.context.support.StandardServletEnvironment - Adding [servletContextInitParams] PropertySource with lowest search precedence
+10:28:59.720 [Test worker] DEBUG org.springframework.web.context.support.StandardServletEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+10:28:59.720 [Test worker] DEBUG org.springframework.web.context.support.StandardServletEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+10:28:59.720 [Test worker] DEBUG org.springframework.web.context.support.StandardServletEnvironment - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,systemProperties,systemEnvironment]
+10:28:59.721 [Test worker] INFO org.springframework.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+10:28:59.721 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization started
+10:28:59.721 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Unable to locate MultipartResolver with name 'multipartResolver': no multipart request handling provided
+10:28:59.721 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Using LocaleResolver [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@5415442]
+10:28:59.721 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Using ThemeResolver [org.springframework.web.servlet.theme.FixedThemeResolver@28c78a72]
+10:28:59.721 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Using RequestToViewNameTranslator [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@97b079e]
+10:28:59.721 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Using FlashMapManager [org.springframework.web.servlet.support.SessionFlashMapManager@191d54ce]
+10:28:59.721 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Published WebApplicationContext of servlet '' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.]
+10:28:59.721 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization completed in 0 ms
+10:28:59.721 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Servlet '' configured successfully
+10:28:59.723 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+10:28:59.724 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+10:28:59.725 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+10:28:59.726 [Test worker] DEBUG org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - Looking for request mappings in application context: org.springframework.test.web.servlet.setup.StubWebApplicationContext@2f16c4d
+10:28:59.726 [Test worker] DEBUG org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - 1 request handler methods found on class fi.softala.vote.controller.MainCtrl: {public java.lang.String fi.softala.vote.controller.MainCtrl.showLogin(javax.servlet.http.HttpSession,org.springframework.ui.Model)={[/],methods=[GET]}}
+10:28:59.726 [Test worker] INFO org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String fi.softala.vote.controller.MainCtrl.showLogin(javax.servlet.http.HttpSession,org.springframework.ui.Model)
+10:28:59.735 [Test worker] DEBUG org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+10:28:59.736 [Test worker] DEBUG org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+10:28:59.736 [Test worker] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+10:28:59.736 [Test worker] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy24
+10:28:59.736 [Test worker] DEBUG org.hibernate.validator.internal.xml.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+10:28:59.736 [Test worker] DEBUG org.hibernate.validator.internal.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+10:28:59.737 [Test worker] DEBUG org.hibernate.validator.internal.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+10:28:59.737 [Test worker] DEBUG org.hibernate.validator.internal.xml.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+10:28:59.739 [Test worker] INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@2f16c4d
+10:28:59.743 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Looking for exception mappings: org.springframework.test.web.servlet.setup.StubWebApplicationContext@2f16c4d
+10:28:59.743 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Initializing servlet ''
+10:28:59.744 [Test worker] DEBUG org.springframework.web.context.support.StandardServletEnvironment - Adding [servletConfigInitParams] PropertySource with lowest search precedence
+10:28:59.744 [Test worker] DEBUG org.springframework.web.context.support.StandardServletEnvironment - Adding [servletContextInitParams] PropertySource with lowest search precedence
+10:28:59.744 [Test worker] DEBUG org.springframework.web.context.support.StandardServletEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+10:28:59.744 [Test worker] DEBUG org.springframework.web.context.support.StandardServletEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+10:28:59.744 [Test worker] DEBUG org.springframework.web.context.support.StandardServletEnvironment - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,systemProperties,systemEnvironment]
+10:28:59.745 [Test worker] INFO org.springframework.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+10:28:59.745 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization started
+10:28:59.745 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Unable to locate MultipartResolver with name 'multipartResolver': no multipart request handling provided
+10:28:59.745 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Using LocaleResolver [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@5db31da6]
+10:28:59.745 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Using ThemeResolver [org.springframework.web.servlet.theme.FixedThemeResolver@709cfd5]
+10:28:59.745 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Using RequestToViewNameTranslator [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3eedc14d]
+10:28:59.745 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Using FlashMapManager [org.springframework.web.servlet.support.SessionFlashMapManager@5acd4910]
+10:28:59.745 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Published WebApplicationContext of servlet '' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.]
+10:28:59.745 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization completed in 0 ms
+10:28:59.745 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Servlet '' configured successfully
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -56,6 +56,24 @@ public class VoteDAOJdbcImpl implements VoteDAO {
 		}
 	}
 
+	// archive votes
+	/* TODO 
+	 * public void archive (Vote vote) {
+	 * 		String query = ""
+	 *  (before creating the method)
+	 *  -> create archive tables
+	 *  (the metod itself does need:)
+	 *  -> insert/transfer data into votearchive etc from vote etc databases
+	 *  -> insert info to event table - which teams and innovations belong to which event
+	 *  -> drop and delete vote etc tables
+	 *  -> create new vote etc tables - create the event table for the new event
+	 *  -> insert team types and "not in team" team etc required
+	 *  -> ready for the new event to add new innovations, teams and voters
+	 * }
+	 * 
+	 */
+
+	
 	@Override
 	// find all votes created
 	public List<Vote> findAllVotes() {
@@ -85,5 +103,6 @@ public class VoteDAOJdbcImpl implements VoteDAO {
 			return vote;
 		});
 	}
-
+	
+	
 }

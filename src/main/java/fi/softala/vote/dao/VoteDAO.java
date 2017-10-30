@@ -10,4 +10,8 @@ public interface VoteDAO {
 	public abstract List<Vote> findByInnovation(Innovation innovation);
 
 	public abstract List<Vote> findAllVotes();
+	
+	/* TODO
+	 * public abstract archive(Vote vote);
+	 */
 }

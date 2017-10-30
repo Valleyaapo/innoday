@@ -14,10 +14,20 @@ Customize view, enable external libraries
 (Presentation Hierarchical)
 (Customize - Content - Nested)
 
+# BIG TODO
+Archive event:
+Move the data from tables to archive-tables, delete unnecessary data:
+team, innovation and votes for innovations are relevant : how to? think it
+Create the archive tables according to the previous
+Empty the databases for the new event
+Add to the Archive the: name the new event below which comes the innovations 
+(which inno belongs to which event ->)
+
 # Further development ideas for the software
 Three votes for a voter, names are not probably necessary info in the database for usage
 but how to ensure a voter does not vote more than three times if there's no name check?
 The % of the given votes among the voters next to the amount of the votes
+-> three votes can be rounded by giving each student 3 profiles to vote on with, requires meeting with the teams beforehand possibly?
 
 # Further usage of the software
 Admin should check the status of the software in a good time before the need of the usage
