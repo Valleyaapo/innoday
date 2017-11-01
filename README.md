@@ -22,6 +22,9 @@ Create the archive tables according to the previous
 Empty the databases for the new event
 Add to the Archive the: name the new event below which comes the innovations 
 (which inno belongs to which event ->)
+PLUS a possibility for admin to view results of old events sorted via event??
+
+
 
 # Further development ideas for the software
 Three votes for a voter, names are not probably necessary info in the database for usage
