@@ -52,6 +52,14 @@ Maybe adding
 lombok, hibernate and RowMappers to the software? (for knowledge: lombok requires an installation to 
 a computer on which it is proggrammed)
 
+probably adding for futher easy access usage : 
+
+Archive TODO and 
+Login systems for:
+( sysadmin - developer / all rights )
+( teacheradmin - adds teams / teamadmin rights + update (or even remove?) teamadmins stuff )
+( teamadmin - adds members to teams and innovations / rights to add not to remove )
+
 # Further usage of the software
 Admin should check the status of the software in a good time before the need of the usage
 Maybe a week or two before the event, in which the engine is required, collect the data from
