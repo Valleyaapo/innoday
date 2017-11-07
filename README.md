@@ -15,14 +15,16 @@ Customize view, enable external libraries
 (Customize - Content - Nested)
 
 # BIG TODO
-Archive event:
+Archive event (for in case there is no admin for easy upkeep):
 
 CREATESwithARCHIVEopt includes the CREATES used in the app and archive tables
+
 drop event / innoarchive should never be used unless a big fail in databases
 as it loses all the stored archive data if applied into use
+
 idea : 
 
-event that is archived should be named as archived - id auto increment
+event that is to be archived should be named as archived - id auto increment
 insert relative data into innoarchive from inno, team, vote maybe as exampled below:
 
 INSERT INTO table2 (column1, column2, column3, ...)
@@ -39,15 +41,15 @@ public interface ArchiveDAO{
 	public abstract void deleteUnused(Innovation inno, Voter voter, Team team, Vote vote);
 }
 
-# Further development ideas for the software
+# Other further development ideas for the software
 Three votes for a voter, names are not probably necessary info in the database for usage
-but how to ensure a voter does not vote more than three times if there's no name check?
+but how to ensure a voter does not vote more than given times if there's no name check?
 
-The % of the given votes among the voters next to the amount of the votes
+The % of the given votes among the voters showed next to the amount of the votes in results page
 -> three votes can be rounded by giving each student 3 profiles to vote on with, requires meeting with the teams beforehand possibly?
 
 Maybe adding 
-lombok and RowMappers to the software? (for knowledge: lombok requires an installation to 
+lombok, hibernate and RowMappers to the software? (for knowledge: lombok requires an installation to 
 a computer on which it is proggrammed)
 
 # Further usage of the software
