@@ -16,14 +16,19 @@ Customize view, enable external libraries
 
 # BIG TODO
 Archive event:
-Move the data from tables to archive-tables, delete unnecessary data:
-team, innovation and votes for innovations are relevant : how to? think it
-Create the archive tables according to the previous
-Empty the databases for the new event
-Add to the Archive the: name the new event below which comes the innovations 
-(which inno belongs to which event ->)
-PLUS a possibility for admin to view results of old events sorted via event??
 
+CREATESwithARCHIVEopt includes the CREATES used in the app and archive tables
+drop event / innoarchive should never be used unless a big fail in databases
+as it loses all the stored archive data if applied into use
+idea : 
+
+event that is archived should be named as archived - id auto increment
+insert relative data into innoarchive from inno, team, vote as exampled below:
+
+INSERT INTO table2 (column1, column2, column3, ...)
+SELECT column1, column2, column3, ...
+FROM table1
+WHERE condition;
 
 
 # Further development ideas for the software
