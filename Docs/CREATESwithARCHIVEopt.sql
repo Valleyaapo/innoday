@@ -41,9 +41,9 @@ CREATE TABLE vote (
 	
 INSERT INTO team (team_id, team_name) VALUES ('1', 'not_in_team');
 
-CREATE TABLE event (
+CREATE TABLE innoevent (
 	event_id BIGINT AUTO_INCREMENT PRIMARY KEY,
-	event VARCHAR(30) NOT NULL
+	eventName VARCHAR(30) NOT NULL
 	)ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE innoarchive (
