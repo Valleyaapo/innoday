@@ -6,7 +6,7 @@ insert into archive (event_id, inno_id, inno_name, inno_desc, team_name) SELECT 
 
 THIS SOLUTION DOES NOT SAVE THE VOTE COUNT!
 
-if votes are not needed to store do the next sql lines ->
+if votes are not needed to store then do the following sql in controller+dao ->
 
 DROP TABLE vote;
 DROP TABLE voter;
