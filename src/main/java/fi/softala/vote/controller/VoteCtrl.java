@@ -87,9 +87,12 @@ public class VoteCtrl {
 			});
 
 			int allvotes = votedao.findAllVotes().size();
+			
+			int votepercent = votedao.countPercent().size();
 
 			model.addAttribute("innovations", innovations);
 			model.addAttribute("allvotes", allvotes);
+			model.addAttribute("votepercent", votepercent);
 			return "results";
 
 		} catch (Exception e) {

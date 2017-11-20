@@ -43,7 +43,9 @@ INSERT INTO team (team_id, team_name) VALUES ('1', 'not_in_team');
 
 CREATE TABLE innoevent (
 	event_id BIGINT AUTO_INCREMENT PRIMARY KEY,
-	eventName VARCHAR(30) NOT NULL
+	eventName VARCHAR(30) NOT NULL,
+	eventYear INT NOT NULL,
+	eventSemester CHAR(6)
 	)ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE innoarchive (

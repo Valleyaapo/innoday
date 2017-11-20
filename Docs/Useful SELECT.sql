@@ -13,3 +13,6 @@ select team_name from team where team_id=***;
 
 select inno_id, inno_name, count(inno_name) FROM inno;
 # should work and should show the amount of innovations in the database
+
+SELECT yes.number / votes.number * 100 FROM (SELECT count(voted) as number FROM voter WHERE voted = 'Y')yes JOIN (SELECT count(voted) as number FROM voter)votes;
+# vote% in decimal

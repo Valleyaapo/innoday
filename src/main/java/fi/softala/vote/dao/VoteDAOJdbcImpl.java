@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import fi.softala.vote.model.Innovation;
 import fi.softala.vote.model.Vote;
+import fi.softala.vote.model.Voter;
 
 @Repository
 public class VoteDAOJdbcImpl implements VoteDAO {
@@ -36,14 +37,9 @@ public class VoteDAOJdbcImpl implements VoteDAO {
 
 	// add new vote
 	public void add(Vote vote) {
-		String query = "INSERT INTO vote(voter_id, inno_id, legit) values(?, ?,'Y')"; // the
-																						// vote
-																						// is
-																						// legit
-																						// ('Y')
-																						// at
-																						// this
-																						// point
+		String query = "INSERT INTO vote(voter_id, inno_id, legit) values(?, ?,'Y')"; 
+		// the vote is legit ('Y') at this point
+		
 		Object[] params = new Object[] { vote.getVoter().getVoterId(),
 				vote.getInnovation().getInnoId(), };
 		int rows = this.jdbc.update(query, params);
@@ -56,22 +52,6 @@ public class VoteDAOJdbcImpl implements VoteDAO {
 		}
 	}
 
-	// archive votes
-	/* TODO 
-	 * public void archive (Vote vote) {
-	 * 		String query = ""
-	 *  (before creating the method)
-	 *  -> create archive tables
-	 *  (the metod itself does need:)
-	 *  -> insert/transfer data into votearchive etc from vote etc databases
-	 *  -> insert info to event table - which teams and innovations belong to which event
-	 *  -> drop and delete vote etc tables
-	 *  -> create new vote etc tables - create the event table for the new event
-	 *  -> insert team types and "not in team" team etc required
-	 *  -> ready for the new event to add new innovations, teams and voters
-	 * }
-	 * 
-	 */
 
 	
 	@Override
@@ -102,6 +82,23 @@ public class VoteDAOJdbcImpl implements VoteDAO {
 			vote.setVoter(voterdao.find(result.getLong("voter_id")));
 			return vote;
 		});
+	}
+	
+	public List<Vote> countPercent(Innovation innovation) {
+
+		String votes = "SELECT yes.number / votes.number * 100 FROM (SELECT count(voted) as number FROM voter WHERE voted = 'Y')yes JOIN (SELECT count(voted) as number FROM voter)votes";
+		Object[] params = new Object[] { innovation.getInnoId() };
+
+		return this.jdbc.query(votes, params, (result, row) -> {
+			Vote vote = new Vote();
+			vote.setVoteId(result.getLong("vote_id"));
+			vote.setLegit(result.getBoolean("legit"));
+			vote.setInnovation(innovationdao.find(result.getLong("inno_id")));
+			vote.setVoter(voterdao.find(result.getLong("voter_id")));
+			return vote;
+		});
+
+
 	}
 	
 	
