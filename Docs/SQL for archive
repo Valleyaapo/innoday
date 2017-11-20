@@ -1,5 +1,13 @@
--- DROP TABLE archive;
--- DROP TABLE event;
+creates the archive table in these inserts
+CREATE TABLE archive ( archive_id BIGINT AUTO_INCREMENT PRIMARY KEY, event_id BIGINT NOT NULL, inno_id BIGINT NOT NULL, inno_name VARCHAR(100) NOT NULL, inno_desc VARCHAR(225), team_name VARCHAR(30) NOT NULL, FOREIGN KEY (event_id) REFERENCES innoevent(event_id), FOREIGN KEY (inno_id) REFERENCES inno(inno_id) )ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+inserts archive data as above
+insert into archive (event_id, inno_id, inno_name, inno_desc, team_name) SELECT event_id, inno_id, inno_name, inno_desc, team_name FROM inno JOIN team USING(team_id);
+
+THIS SOLUTION DOES NOT SAVE THE VOTE COUNT!
+
+if votes are not needed to store do the next sql lines ->
+
 DROP TABLE vote;
 DROP TABLE voter;
 DROP TABLE inno;
@@ -42,22 +50,3 @@ CREATE TABLE vote (
 	)ENGINE=InnoDB DEFAULT CHARSET=latin1;
 	
 INSERT INTO team (team_id, team_name) VALUES ('1', 'not_in_team');
-
-CREATE TABLE innoevent (
-	event_id BIGINT AUTO_INCREMENT PRIMARY KEY,
-	eventName VARCHAR(30) NOT NULL,
-	eventYear INT NOT NULL,
-	eventSemester CHAR(6)
-	)ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-CREATE TABLE archive ( 
-archive_id BIGINT AUTO_INCREMENT PRIMARY KEY, 
-event_id BIGINT NOT NULL, 
-inno_id BIGINT NOT NULL, 
-inno_name VARCHAR(100) NOT NULL, 
-inno_desc VARCHAR(225), 
-team_name VARCHAR(30) NOT NULL, 
-FOREIGN KEY (event_id) REFERENCES innoevent(event_id), 
-FOREIGN KEY (inno_id) REFERENCES inno(inno_id) 
-)ENGINE=InnoDB DEFAULT CHARSET=latin1;
-	

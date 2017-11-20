@@ -95,4 +95,8 @@ public class AdminCtrl {
 
 		return "admin";
 	}
+	
+	// archive event ->
+	// start new event
+	
 }
