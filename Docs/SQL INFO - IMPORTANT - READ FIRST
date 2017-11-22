@@ -13,7 +13,7 @@ which represents that they do have a team they do belong which they must choose 
 	This id and the name represent the students, teachers and visitors in the voting
 	This might need some tweaking in further development, so far this has been the most convenient solution.
 	
-#3 Please, note that the team_id 1 is included in the test data inserts, you cannot add it multiple times.
+#3 Please, note that the team_id 1 /is/ included in the test data inserts, you cannot add it multiple times.
 
 #4 Feel free to create more test data in case you do not have the data required
 

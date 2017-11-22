@@ -1,5 +1,3 @@
--- DROP TABLE archive;
--- DROP TABLE event;
 DROP TABLE vote;
 DROP TABLE voter;
 DROP TABLE inno;
@@ -64,4 +62,25 @@ votes INT NOT NULL default '0',
 FOREIGN KEY (event_id) REFERENCES innoevent(event_id), 
 FOREIGN KEY (inno_id) REFERENCES inno(inno_id) 
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
-	
+
+-- another possibility to archive data (innoevent+archive -> event), if innovations etc are not necessary
+-- allows also vote % be drawn straight from the database 
+-- vote % is built in voteDAO, results.html
+-- would need a controller which inserts the following:
+-- COUNT(voted) FROM voter where voted = 'Y'
+-- COUNT(voted) FROM voter; 
+-- &
+-- SELECT yes.number / votes.number * 100 
+-- FROM (SELECT count(voted) as number FROM voter WHERE voted = 'Y')yes 
+-- JOIN (SELECT count(voted) as number FROM voter)votes
+
+CREATE TABLE event (
+	event_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+	eventName VARCHAR(30) NOT NULL,
+	eventYear INT NOT NULL,
+	eventSemester CHAR(6),
+	voteAmount INT,
+	votersAmount INT,
+	votePercent DOUBLE,
+	)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
