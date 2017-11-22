@@ -84,7 +84,9 @@ public class VoteDAOJdbcImpl implements VoteDAO {
 		});
 	}
 	
-	public List<Vote> countPercent(Innovation innovation) {
+	public List<Vote> countPercent() {
+		
+		Innovation innovation = new Innovation();
 
 		String votes = "SELECT yes.number / votes.number * 100 FROM (SELECT count(voted) as number FROM voter WHERE voted = 'Y')yes JOIN (SELECT count(voted) as number FROM voter)votes";
 		Object[] params = new Object[] { innovation.getInnoId() };
@@ -100,6 +102,7 @@ public class VoteDAOJdbcImpl implements VoteDAO {
 
 
 	}
+
 	
 	
 }

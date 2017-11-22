@@ -50,13 +50,17 @@ CREATE TABLE innoevent (
 	eventSemester CHAR(6)
 	)ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- this makes the archive dependant of inno, how to save the data from events without
+-- the depedency?
+	
 CREATE TABLE archive ( 
 archive_id BIGINT AUTO_INCREMENT PRIMARY KEY, 
 event_id BIGINT NOT NULL, 
 inno_id BIGINT NOT NULL, 
 inno_name VARCHAR(100) NOT NULL, 
 inno_desc VARCHAR(225), 
-team_name VARCHAR(30) NOT NULL, 
+team_name VARCHAR(30) NOT NULL,
+votes INT NOT NULL default '0',
 FOREIGN KEY (event_id) REFERENCES innoevent(event_id), 
 FOREIGN KEY (inno_id) REFERENCES inno(inno_id) 
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
