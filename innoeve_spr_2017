@@ -1,0 +1,38 @@
+Äänestys InnoEve kevät 2017
+
++---------+----------+------------------------------------------------------------+-------------------+-------+
+| inno_id | event_id | inno_name                                                  | team_name         | votes |
++---------+----------+------------------------------------------------------------+-------------------+-------+
+|      55 |        1 | LockGyver                                                  | Korso innovations |    10 |
+|      56 |        1 | Arduino-ohjattu kastelujärjestelmä                         | InnoKEK           |    39 |
+|      57 |        1 | Berrybox                                                   | BROS              |     4 |
+|      58 |        1 | InnoChassis                                                | BI66ER            |    19 |
+|      59 |        1 | Testaa ja inspiroidu                                       | YksKolmeKaks      |  NULL |
+|      60 |        1 | Digimetsä                                                  | Enigma            |  NULL |
+|      61 |        1 | Matkakuvakilpailu                                          | Plan B            |     2 |
+|      62 |        1 | iFolor Inspire                                             | Lucky Number 7    |     3 |
+|      63 |        1 | Nexus                                                      | Fantastikot       |     5 |
+|      64 |        1 | Creative Filter Solution                                   | InnoWave          |     1 |
+|      65 |        1 | #ifolorinspire                                             | Invaasio          |  NULL |
+|      66 |        1 | Käyttäjäkokemuksen parantaminen ifolor - verkkokaupassa    | Innovaattorit     |  NULL |
+|      67 |        1 | Kämpästä kodiksi                                           | PhotoBombers      |     3 |
+|      68 |        1 | Festaristandi                                              | 5 kaverin kimppa  |     3 |
+|      69 |        1 | Kolmen klikkauksen taktiikka                               | Backbone          |     1 |
+|      70 |        1 | Tapahtumaväylä                                             | Jeesmiehet        |  NULL |
+|      71 |        1 | Kummipolku                                                 | Fantastic Four    |     4 |
+|      72 |        1 | Vaakavesi                                                  | Vaakavesi         |     2 |
+|      73 |        1 | Veneilyvideo                                               | Kolin ali         |  NULL |
+|      74 |        1 | Soukan Venekerho/oma mentori                               | Plimp             |     1 |
+|      75 |        1 | Soukan Venekerhon paviljonki                               | Kapa Rua          |     1 |
+|      76 |        1 | Aktiivista viestintää, virkistävää vapaa-aikaa             | Viisikko          |     2 |
+|      77 |        1 | Click                                                      | Proiacere         |     1 |
+|      78 |        1 | Soukan kesänavaus                                          | Team 4            |  NULL |
+|      79 |        1 | Eksyksillä sivustolla?                                     | vMojos            |  NULL |
+|      80 |        1 | Social Media ABC                                           | H3                |     1 |
+|      81 |        1 | Mindstone elämä on nyt                                     | Onnivaatio        |  NULL |
+|      82 |        1 | MetsApp                                                    | AA-paja           |     1 |
+|      83 |        1 | Virme                                                      | Valittu           |  NULL |
+|      84 |        1 | Virtuaalinen metsäretki                                    | Andromeda         |     1 |
+|      85 |        1 | MindGoya App                                               | Mind Goya         |  NULL |
++---------+----------+------------------------------------------------------------+-------------------+-------+
+31 rows in set (0.00 sec)
